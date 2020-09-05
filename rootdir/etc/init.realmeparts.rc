@@ -1,0 +1,49 @@
+on boot
+
+# KCAL permissions
+  chown system system /sys/module/msm_drm/parameters/kcal
+  chown system system /sys/module/msm_drm/parameters/kcal_enable
+  chown system system /sys/module/msm_drm/parameters/kcal_cont
+  chown system system /sys/module/msm_drm/parameters/kcal_sat
+  chown system system /sys/module/msm_drm/parameters/kcal_hue
+  chown system system /sys/module/msm_drm/parameters/kcal_min
+  chown system system /sys/module/msm_drm/parameters/kcal_val
+  chown system system /sys/module/msm_drm/parameters/kcal_red
+  chown system system /sys/module/msm_drm/parameters/kcal_green
+  chown system system /sys/module/msm_drm/parameters/kcal_blue
+  chmod 0660 /sys/module/msm_drm/parameters/kcal
+  chmod 0660 /sys/module/msm_drm/parameters/kcal_enable
+  chmod 0660 /sys/module/msm_drm/parameters/kcal_cont
+  chmod 0660 /sys/module/msm_drm/parameters/kcal_sat
+  chmod 0660 /sys/module/msm_drm/parameters/kcal_hue
+  chmod 0660 /sys/module/msm_drm/parameters/kcal_min
+  chmod 0660 /sys/module/msm_drm/parameters/kcal_val
+  chmod 0660 /sys/module/msm_drm/parameters/kcal_red
+  chmod 0660 /sys/module/msm_drm/parameters/kcal_blue
+  chmod 0660 /sys/module/msm_drm/parameters/kcal_green
+
+# Vibrator permissions
+  chown system system /sys/class/leds/vibrator/vmax_mv_user
+  chown system system /sys/class/leds/vibrator/vmax_mv_strong
+  chown system system /sys/class/leds/vibrator/vmax_mv_call
+  chown system system sys/class/leds/vibrator/vmax_override
+  chmod 0660 /sys/class/leds/vibrator/vmax_mv_user
+  chmod 0660 /sys/class/leds/vibrator/vmax_mv_strong
+  chmod 0660 /sys/class/leds/vibrator/vmax_mv_call
+  chmod 0660 /sys/class/leds/vibrator/vmax_override
+
+# Audio gain permissions
+  chown system system /sys/kernel/sound_control/headphone_gain
+  chown system system /sys/kernel/sound_control/mic_gain
+  chown system system /sys/kernel/sound_control/earpiece_gain
+  chown system system /sys/kernel/sound_control/speaker_gain
+  chmod 0660 /sys/kernel/sound_control/headphone_gain
+  chmod 0660 /sys/kernel/sound_control/mic_gain 
+  chmod 0660 /sys/kernel/sound_control/earpiece_gain
+  chmod 0660 /sys/kernel/sound_control/speaker_gain
+
+# Torch permissions
+  chmod 0660 /sys/class/leds/led:torch_0/max_brightness
+  chmod 0660 /sys/class/leds/led:torch_1/max_brightness
+  chown system system /sys/class/leds/led:torch_0/max_brightness
+  chown system system /sys/class/leds/led:torch_1/max_brightness

@@ -332,6 +332,7 @@ PRODUCT_PACKAGES += \
     init.oppo.fingerprints.sh \
     init.qcom.early_boot.sh \
     init.qcom.post_boot.sh \
+    init.realmeparts.sh \
     init.qcom.rc \
     init.qcom.sensors.sh \
     init.qcom.sh \
@@ -339,6 +340,7 @@ PRODUCT_PACKAGES += \
     init.qcom.usb.sh \
     init.recovery.qcom.rc \
     init.target.rc \
+    init.realmeparts.rc \
     ueventd.qcom.rc
 
 # RCS
@@ -347,6 +349,10 @@ PRODUCT_PACKAGES += \
     rcs_service_aidl.xml \
     rcs_service_api \
     rcs_service_api.xml
+
+# Realme Parts
+PRODUCT_PACKAGES += \
+    RealmeParts
 
 # Recovery
 PRODUCT_PACKAGES += \
