@@ -99,4 +99,9 @@
     <!-- Label for feature switch -->
     <string name="switch_bar_off">Off</string>
 
+    <!-- Extras -->
+    <string name="extra_title">Extras</string>
+    <string name="device_settings_title">Device Settings</string>
+    <string name="device_settings_summary">Custom device settings</string>
+
 </resources>

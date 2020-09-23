@@ -54,6 +54,8 @@ public class DeviceSettings extends PreferenceFragment implements
     public static final String KEY_CALL_VIBSTRENGTH = "call_vib_strength";
     public static final String CATEGORY_DISPLAY = "display";
     public static final String PREF_DEVICE_KCAL = "device_kcal";
+    public static final String PREF_DEVICESETTINGS = "device_settings";
+    private static final String EXTRA_CATEGORY = "extra";
 
     public static final String PREF_HEADPHONE_GAIN = "headphone_gain";
     public static final String HEADPHONE_GAIN_PATH = "/sys/kernel/sound_control/headphone_gain";
@@ -63,6 +65,8 @@ public class DeviceSettings extends PreferenceFragment implements
     public static final String EARPIECE_GAIN_PATH = "/sys/kernel/sound_control/earpiece_gain";
     public static final String PREF_SPEAKER_GAIN = "speaker_gain";
     public static final String SPEAKER_GAIN_PATH = "/sys/kernel/sound_control/speaker_gain";
+
+    private static final String DEVICE_SETTINGS_PACKAGE_NAME = "org.lineageos.settings.device";
 
     public static final int MIN_LED = 1;
     public static final int MAX_LED = 255;
@@ -115,6 +119,11 @@ public class DeviceSettings extends PreferenceFragment implements
         mCallVibratorStrength = (CallVibratorStrengthPreference) findPreference(KEY_CALL_VIBSTRENGTH);
         if (mCallVibratorStrength != null) {
             mCallVibratorStrength.setEnabled(CallVibratorStrengthPreference.isSupported());
+        }
+
+        PreferenceCategory extraCategory = (PreferenceCategory) findPreference(EXTRA_CATEGORY);
+        if (isAppNotInstalled(DEVICE_SETTINGS_PACKAGE_NAME)) {
+            displayCategory.removePreference(findPreference(PREF_DEVICESETTINGS));
         }
 
         mHeadphoneGain = (CustomSeekBarPreference) findPreference(PREF_HEADPHONE_GAIN);

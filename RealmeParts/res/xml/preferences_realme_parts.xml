@@ -110,4 +110,22 @@
 
     </PreferenceCategory>
 
+    <PreferenceCategory
+        android:key="extra"
+        android:title="@string/extra_title">
+
+        <Preference
+            android:key="device_settings"
+            android:persistent="false"
+            android:summary="@string/device_settings_summary"
+            android:title="@string/device_settings_title"
+            android:icon="@drawable/ic_settings_devicesettings">
+            <intent
+                android:action="android.intent.action.MAIN"
+                android:targetClass="org.lineageos.settings.device.DeviceSettingsActivity"
+                android:targetPackage="org.lineageos.settings.device" />
+        </Preference>
+
+    </PreferenceCategory>
+
 </PreferenceScreen>
