@@ -7,6 +7,10 @@
 # Inherit some common Elegant UI Stuff.
 $(call inherit-product, vendor/elegant/config/common_full_phone.mk)
 
+# Maintainer
+PRODUCT_PROPERTY_OVERRIDES += \
+    org.maintainer=Aston-Martinn
+
 # Bootanimation
 TARGET_BOOT_ANIMATION_RES := 1080
 
